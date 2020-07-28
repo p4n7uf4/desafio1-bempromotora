@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="border">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="dados.php" class="nav-link">Dados da pesquisa</a>
+                </li>
+            </ul>
+        </div>
+        <h1 class="text-center">Pesquisa de clientes</h1>
+        <form action="salva_pesquisa.php" method="POST">
+            <label for="idade">Qual sua faixa de idade:</label>
+            <select class="form-control" name="idade" id="idade">
+                <option value="x">Selecione uma faixa etária</option>
+                <option value="a">Até 30 anos</option>
+                <option value="b">De 30 a 50 anos</option>
+                <option value="c">De 50 a 65 anos</option>
+                <option value="d">Acima de 65 anos</option>
+            </select>
+            <br>
+            <label for="convenio">Qual seu convênio:</label>
+            <select class="form-control" name="convenio" id="convenio">
+                <option value="x">Selecione seu convênio</option>
+                <option value="a">INSS</option>
+                <option value="b">SIAPE</option>
+                <option value="c">Forças Armadas</option>
+                <option value="d">Outros</option>
+            </select>
+            <br>
+            <label for="salario">Qual sua faixa salarial:</label>
+            <select name="salario" id="salario" class="form-control">
+                <option value="x">Selecione sua faixa salarial</option>
+                <option value="a">Até 2 salários mínimos</option>
+                <option value="b">De 2 a 4 salários mínimos</option>
+                <option value="c">De 4 a 6 salários mínimos</option>
+                <option value="d">Acima de 6 salários mínimos</option>
+            </select>
+            <br>
+            <label for="razao">Por que você realizou o empréstimo:</label>
+            <select name="razao" id="razao" class="form-control">
+                <option value="x">Selecione a razão para o empréstimo</option>
+                <option value="a">Pagar contas</option>
+                <option value="b">Reforma da Casa</option>
+                <option value="c">Compra de carro</option>
+                <option value="d">Outras</option>
+            </select>
+            <hr>
+            <button type="reset" value="Reset" class="btn btn-secondary">Limpar</button>
+            <button type="submit" value="Save" class="btn btn-success">Salvar</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
